@@ -1,23 +1,28 @@
 import { Modal } from './UI/Modal';
 import { Map } from './UI/Map';
-import { getCoordsFromAddress } from './Utility/Location';
+import { getCoordsFromAddress , getAddressFromCoords} from './Utility/Location';
 
 class PlaceFinder{
 
     constructor() {
         const addrForm = document.querySelector('form');
         const locateUsrBtn = document.getElementById('locate-btn');
+        this.shareBtn = document.getElementById('share-btn');
 
         locateUsrBtn.addEventListener('click', this.locateUserHandler.bind(this));
+        // this.shareBtn.addEventListener('click', )
         addrForm.addEventListener('submit', this.findAddressHandler.bind(this));
     }
 
-    selectPlace(coordinates) {
+    selectPlace(coordinates, address) {
         if (this.map) {
             this.map.render(coordinates);
         } else {
             this.map = new Map(coordinates);
         }
+        this.shareBtn.disabled = false;
+        const shareLinkInput = document.getElementById('share-link');
+        shareLinkInput.value = `${location.origin}/my-place?address=${encodeURI(address)}&lat=${coordinates.lat}&lng=${coordinates.lng}`;
     }
 
     locateUserHandler() {
@@ -29,13 +34,15 @@ class PlaceFinder{
         const modal = new Modal('loading-modal-content', 'Loading location - please wait' )
         modal.show();
         navigator.geolocation.getCurrentPosition(
-            successResult => {
+           async successResult => {
                 modal.hide();
                 const coordinates = {
                     lat: successResult.coords.latitude + Math.random() * 50,
                     lng: successResult.coords.longitude + Math.random() * 50
                 };
-                this.selectPlace(coordinates)
+                const address = await getAddressFromCoords(coordinates);
+                modal.hide();
+                this.selectPlace(coordinates, address)
              },
             error => {
                 modal.hide();
@@ -59,7 +66,7 @@ class PlaceFinder{
       modal.show();
       try {
         const coordinates = await getCoordsFromAddress(address);
-        this.selectPlace(coordinates);
+        this.selectPlace(coordinates, address);
       } catch (error) {
           alert(error.message);
       }
