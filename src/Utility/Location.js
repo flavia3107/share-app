@@ -13,6 +13,6 @@ export async function getCoordsFromAddress(address) {
         throw new Error(data.error_message);
     }
 
-    const coordinates = data.result[0].geometry.location;
+    const coordinates = data.results[0].geometry.location;
     return coordinates;
 }
