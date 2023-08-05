@@ -44,9 +44,11 @@
   <main>
     <section id="selected-place">
       <div id="map">
-        <p>
-          You haven't selected any place yet. Please enter an address or locate
-          yourself!
+        <p class="map-placeholder">
+          <span> You haven't selected any place yet. Please enter an address or locate
+            yourself!
+          </span>
+          <img src="./assets/images/world.svg">
         </p>
       </div>
     </section>
@@ -59,6 +61,9 @@
           <input type="text" />
           <button type="submit">Find Place</button>
         </form>
+        <fieldset>
+          <legend>OR</legend>
+        </fieldset>
         <button id="locate-btn">Get Current Location</button>
       </section>
 
