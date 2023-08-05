@@ -8,13 +8,21 @@
   <title>My Place</title>
   <link rel="stylesheet" href="../assets/styles/app.css" />
   <link rel="stylesheet" href="../assets/styles/my-place.css" />
+  <link rel="stylesheet" href="../assets/styles/navbar.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJpkEA3-h5QwLGwQqqmgLAsY3r8mPci00" defer></script>
   <script src="../assets/scripts/MyPlace.js" defer></script>
 </head>
 
 <body>
-  <header>
-    <h1></h1>
+  <header class="navigation-body">
+    <h1 class="title-name">
+      <span class="material-icons"> location_on </span>
+      <span id="addr_value"></span>
+    </h1>
+    <a href="https://all-projects-portfolio.web.app/" target="_blank">
+      <span class="material-icons"> home</span>
+    </a>
   </header>
 
   <section id="selected-place">

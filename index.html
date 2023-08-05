@@ -8,9 +8,10 @@
   <title>Share a Place</title>
   <link rel="stylesheet" href="assets/styles/app.css" />
   <link rel="stylesheet" href="assets/styles/share-place.css" />
+  <link rel="stylesheet" href="assets/styles/navbar.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="assets/scripts/SharePlace.js" defer></script>
   <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJpkEA3-h5QwLGwQqqmgLAsY3r8mPci00"></script>
-
 </head>
 
 <body>
@@ -24,32 +25,56 @@
     </div>
   </template>
 
-  <header>
-    <h1>Share a Place!</h1>
+  <header class="navigation-body">
+    <p class="title-name">
+      <span class="material-icons"> location_on </span>
+      PinPoint
+    </p>
+    <div class="logo">
+      <img src="./assets/images/logo-white.svg">
+      <div class="logo-txt">
+        <h1>FLAVIA</h1>
+        <span>Kosti</span>
+      </div>
+    </div>
+    <a href="https://all-projects-portfolio.web.app/" target="_blank">
+      <span class="material-icons"> home</span>
+    </a>
   </header>
 
-  <section id="selected-place">
-    <div id="map">
-      <p>
-        You haven't selected any place yet. Please enter an address or locate
-        yourself!
-      </p>
+  <main>
+    <section id="selected-place">
+      <div id="map">
+        <p class="map-placeholder">
+          <span> You haven't selected any place yet. Please enter an address or locate
+            yourself!
+          </span>
+          <img src="./assets/images/world.svg">
+        </p>
+      </div>
+    </section>
+
+    <div class="address-details-section">
+
+      <section id="place-data">
+        <form>
+          <label for="address">Address</label>
+          <input type="text" />
+          <button type="submit">Find Place</button>
+        </form>
+        <fieldset>
+          <legend>OR</legend>
+        </fieldset>
+        <button id="locate-btn">Get Current Location</button>
+      </section>
+
+      <section id="share-controls">
+        <textarea id="share-link" type="text" readonly value="Select a place to get a sharable link."></textarea>
+        <button id="share-btn" disabled>Share Place</button>
+      </section>
     </div>
-  </section>
+  </main>
 
-  <section id="share-controls">
-    <input id="share-link" type="text" readonly value="Select a place to get a sharable link." />
-    <button id="share-btn" disabled>Share Place</button>
-  </section>
-
-  <section id="place-data">
-    <form>
-      <label for="address">Address</label>
-      <input type="text" />
-      <button type="submit">Find Place</button>
-    </form>
-    <button id="locate-btn">Get Current Location</button>
-  </section>
 </body>
 
 </html>

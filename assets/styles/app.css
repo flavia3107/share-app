@@ -1,38 +1,33 @@
+:root {
+  --primary-color: #000000;
+  --font-size-medium: 16px;
+  --card-color: #c7e7f54a;
+  --body-background: #f9f9f9;
+  --font-color: #000000;
+  --hover: #383838;
+}
+
 * {
   box-sizing: border-box;
 }
 
 html {
-  font-family: sans-serif;
+  font-family: 'Open Sans';
+  height: 100%;
 }
 
 body {
   margin: 0;
-}
-
-header {
-  background: #36007c;
-  width: 100%;
-  height: 4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.26);
-}
-
-header h1 {
-  font-size: 2rem;
-  color: white;
-  margin: 0;
+  height: calc(100% - 100px);
 }
 
 button {
   font: inherit;
-  font-size: 1.25rem;
-  background: #36007c;
+  font-size: 1.1rem;
+  background:  var(--primary-color);
   color: white;
-  border: 1px solid #36007c;
-  border-radius: 6px;
+  border: 1px solid  var(--primary-color);
+  border-radius: 4px;
   padding: 0.5rem 1.5rem;
   margin: 0.5rem 0;
   cursor: pointer;
@@ -44,8 +39,8 @@ button:focus {
 
 button:hover,
 button:active {
-  background: #55007c;
-  border-color: #55007c;
+  background-color: var( --hover);
+  border-color: var( --hover);
 }
 
 button:disabled,
@@ -94,6 +89,7 @@ button:disabled:active {
   width: 64px;
   height: 64px;
 }
+
 .lds-dual-ring:after {
   content: ' ';
   display: block;
@@ -118,5 +114,34 @@ button:disabled:active {
   .modal {
     left: calc(50% - 15rem);
     width: 30rem;
+  }
+}
+
+
+ /* MAIN */
+ main{
+   display: flex;
+   flex-direction: row;
+   height: 100%;
+   padding: 0rem 1.5rem;
+   max-width: 90rem;
+    margin: auto;
+ }
+
+@media only screen and (max-width: 900px) {
+  main {
+    flex-direction: column;
+  }
+
+  main #selected-place,
+  main .address-details-section,
+  main #place-data, 
+  main #share-controls{
+    width: 100%;
+    max-width: 100%;
+  }
+
+  main #selected-place{
+    min-height: 45rem;
   }
 }
