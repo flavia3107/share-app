@@ -127,3 +127,21 @@ button:disabled:active {
    max-width: 90rem;
     margin: auto;
  }
+
+@media only screen and (max-width: 900px) {
+  main {
+    flex-direction: column;
+  }
+
+  main #selected-place,
+  main .address-details-section,
+  main #place-data, 
+  main #share-controls{
+    width: 100%;
+    max-width: 100%;
+  }
+
+  main #selected-place{
+    min-height: 45rem;
+  }
+}
