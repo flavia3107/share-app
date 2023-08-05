@@ -40,7 +40,8 @@ class PlaceFinder{
         }
         this.shareBtn.disabled = false;
         const shareLinkInput = document.getElementById('share-link');
-        shareLinkInput.value = `${location.origin}/my-place?address=${encodeURI(address)}&lat=${coordinates.lat}&lng=${coordinates.lng}`;
+        const url = location.origin.includes('github') ? '/share-app' : '';
+        shareLinkInput.value = `${location.origin}${url}/my-place?address=${encodeURI(address)}&lat=${coordinates.lat}&lng=${coordinates.lng}`;
     }
 
     locateUserHandler() {
