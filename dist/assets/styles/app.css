@@ -12,11 +12,13 @@
 }
 
 html {
-  font-family: sans-serif;
+  font-family: 'Open Sans';
+  height: 100%;
 }
 
 body {
   margin: 0;
+  height: calc(100% - 100px);
 }
 
 button {
@@ -185,4 +187,10 @@ header a span{
     font-size: 0.85rem;
   }
 
- 
+ /* MAIN */
+ main{
+   display: flex;
+   flex-direction: row;
+   height: 100%;
+   padding: 0rem 1.5rem;
+ }
