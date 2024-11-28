@@ -1,69 +1,71 @@
-.navigation-body{
-    background-color: var(--primary-color);
-    padding: 1rem;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.26);
+.title-name {
+  font-size: 1.3rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-transform: capitalize;
 }
 
-.navigation-body a span{
-    color: white;
+.name,
+.sign {
+  margin-top: 0;
 }
 
-.title-name{
-    font-size: 1.3rem;
-    margin:0;    
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    text-transform: capitalize;
+.main-title {
+  text-align: start;
+  margin: 1.6rem 0 0.5rem 0;
 }
 
-.name, 
-.sign{
-    margin-top: 0;
+.logo {
+  display: flex;
+  align-items: center;
 }
 
-
-.main-title{
-    text-align: start;
-    margin: 1.6rem 0 0.5rem 0;
+.logo > img {
+  height: 35px;
 }
 
- .logo {
-    display: flex;
-    align-items: center;
-  }
+.logo-txt {
+  padding-left: 7px;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  align-items: flex-start;
+}
 
-  .logo img {
-    height: 35px;
-  }
+.logo-img {
+  width: 2rem;
+  margin-right: 3px;
+}
 
-  .logo-txt {
-    padding-left: 7px;
-    display: flex;
-    flex-direction: column;
-    color: var(--heading-color);
-  }
+.logo-txt h1,
+.logo-txt span {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  letter-spacing: 4px;
+  color: #000;
+}
 
-  .logo-txt h1,
-  .logo-txt span {
-    margin: 0;
-    padding: 0;
-    line-height: 1;
-    letter-spacing: 4px;
-    text-align: start;
-  }
+.logo-txt h1 {
+  font-weight: bolder;
+  font-size: 1.1rem;
+  margin-top: 2px;
+}
 
-  .logo-txt h1 {
-    font-weight: bolder;
-    font-size: 1.1rem;
-    margin-top: 2px;
-  }
+.logo-txt span {
+  font-weight: lighter;
+  font-size: 0.85rem;
+}
 
-  .logo-txt span {
-    opacity: 0.8;
-    font-size: 0.85rem;
-  }
+.row {
+  display: flex;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  width: 10rem;
+  padding: 0.5rem;
+}

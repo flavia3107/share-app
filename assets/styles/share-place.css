@@ -8,7 +8,7 @@ label {
   font-weight: 100;
   letter-spacing: 1px;
   padding: 0 5rem;
-  font-size: 1.3rem;  
+  font-size: 1.3rem;
   margin: 0.5rem 0;
 }
 
@@ -22,10 +22,10 @@ input {
   color: #696969;
 }
 
-input:focus{
+input:focus {
   outline: none;
   background: #e6f6fd45;
-  border-color: rgba(179, 204, 230, 0.91)
+  border-color: rgba(179, 204, 230, 0.91);
 }
 
 #selected-place {
@@ -34,6 +34,7 @@ input:focus{
   margin: 2rem auto;
   border: 1px solid #dfdddd;
   border-radius: 5px;
+  min-height: 48rem;
 }
 
 #map {
@@ -45,12 +46,12 @@ input:focus{
 }
 
 #share-controls {
-    width: 40rem;
-    max-width: 90%;
-    margin: 2rem auto 0 auto;
-    padding: 4rem 0 1rem 0;
-    text-align: end;
-    border-top: 1px solid #dfdddd;
+  width: 40rem;
+  max-width: 90%;
+  margin: 2rem auto 0 auto;
+  padding: 4rem 0 1rem 0;
+  text-align: end;
+  border-top: 1px solid #dfdddd;
 }
 
 #share-controls input {
@@ -67,28 +68,27 @@ input:focus{
   border-radius: 5px;
 }
 
-textarea{
-    width: 100%;
-    height: 10rem;
-    border: 1px solid #b0d2e0;
-    padding: 2rem 1.5rem;
-    resize: none;
-    background: #c7e7f54a;
-    border-radius: 5px;
+textarea {
+  width: 100%;
+  height: 10rem;
+  border: 1px solid #b0d2e0;
+  padding: 2rem 1.5rem;
+  resize: none;
+  background: #c7e7f54a;
+  border-radius: 5px;
 }
 
 input:focus-visible,
 textarea:focus-visible {
-    outline: none;
+  outline: none;
 }
 
-
-.address-details-section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    width: 50%;
+.address-details-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 50%;
 }
 
 fieldset {
@@ -106,26 +106,26 @@ fieldset legend {
   color: #c1c1c1;
 }
 
-form{
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-.map-placeholder{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8rem;
-    height: 100%;
+.map-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8rem;
+  height: 100%;
 }
 
-.map-placeholder img{
+.map-placeholder img {
   width: 90%;
 }
 
-.map-placeholder span{
+.map-placeholder span {
   font-size: 1rem;
   font-weight: 100;
   letter-spacing: 1px;
