@@ -11,8 +11,6 @@
     "build:prod": "webpack --config webpack.config.prod.js",
     "deploy": "gh-pages -d dist"
   },
-  "author": "Maximilian Schwarzmüller",
-  "license": "ISC",
   "browserslist": "> 0.5%",
   "devDependencies": {
     "@babel/core": "^7.6.2",
